@@ -20,7 +20,7 @@ $(function () {
                 console.log(response)
             }
         });
-    }, 1000)
+    }, 5000)
 
     $.ajax({
         type: "POST",
