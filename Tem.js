@@ -23,10 +23,10 @@ function drawLineColors() {
       ]);
 
       var options = {
-        hAxis: {
+        sleep: {
           title: 'Time'
         },
-        vAxis: {
+        high: {
           title: 'Popularity'
         },
         colors: ['#a52714', '#097138']
