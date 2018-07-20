@@ -35,3 +35,74 @@ function drawLineColors() {
       var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
       chart.draw(data, options);
     }
+
+    $(function() {
+
+      setInterval(function () {
+          $.ajax({
+              type: "GET",
+              url: "http://exceed.srakrn.me/api/fingerpalm-temperature/view/",
+              dataType: "text",
+              
+              success: function (response) {
+                  console.log(response)
+                 
+                      $('#temp1').text(`${response}`)
+                  
+              },
+              fail: function (response) {
+                  console.log(response)
+              }
+          });
+      }, 5000)
+
+      setInterval(function () {
+        $.ajax({
+            type: "GET",
+            url: "http://exceed.srakrn.me/api/fingerpalm-moisture/view/",
+            dataType: "text",
+            
+            success: function (response) {
+                console.log(response)
+               
+                    $('#temp2').text(`${response}`)
+                
+            },
+            fail: function (response) {
+                console.log(response)
+            }
+        });
+    }, 5000)
+
+    $('#on-button').on('click',function() {
+      $.ajax({
+        type: "POST",
+        url: "http://exceed.srakrn.me/api/fingerpalm-aircon/set/",
+        data: {
+          value:"0"
+        },
+        dataType: "json",
+        success: function (response) {
+          console.log(response)
+        }
+      });
+    })
+
+    $('#off-button').on('click',function() {
+      $.ajax({
+        type: "POST",
+        url: "http://exceed.srakrn.me/api/fingerpalm-aircon/set/",
+        data: {
+          value:"1"
+        },
+        dataType: "json",
+        success: function (response) {
+          console.log(response)
+        }
+      });
+    })
+    
+  
+  })
+
+  
