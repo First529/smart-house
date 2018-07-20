@@ -2,7 +2,7 @@ $(function(){
     $('#on-button').on('click',function(){
         $.ajax({
             type: "POST",
-            url: "http://exceed.srakrn.me/api/fingerpalm-buzz/set/",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/fingerpalm-buzz/set/",
             data: {
                 value:"1"
             },
@@ -16,7 +16,7 @@ $(function(){
     $('#off-button').on('click',function(){
         $.ajax({
             type: "POST",
-            url: "http://exceed.srakrn.me/api/fingerpalm-buzz/set/",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/fingerpalm-buzz/set/",
             data: {
                 value:"0"
             },

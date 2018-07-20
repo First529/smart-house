@@ -41,7 +41,7 @@ function drawLineColors() {
       setInterval(function () {
           $.ajax({
               type: "GET",
-              url: "http://exceed.srakrn.me/api/fingerpalm-temperature/view/",
+              url: "http://ecourse.cpe.ku.ac.th:1515/api/fingerpalm-temperature/view/",
               dataType: "text",
               
               success: function (response) {
@@ -59,7 +59,7 @@ function drawLineColors() {
       setInterval(function () {
         $.ajax({
             type: "GET",
-            url: "http://exceed.srakrn.me/api/fingerpalm-moisture/view/",
+            url: "http://ecourse.cpe.ku.ac.th:1515/api/fingerpalm-moisture/view/",
             dataType: "text",
             
             success: function (response) {
@@ -77,7 +77,7 @@ function drawLineColors() {
     $('#on-button').on('click',function() {
       $.ajax({
         type: "POST",
-        url: "http://exceed.srakrn.me/api/fingerpalm-aircon/set/",
+        url: "http://ecourse.cpe.ku.ac.th:1515/api/fingerpalm-aircon/set/",
         data: {
           value:"0"
         },
@@ -91,7 +91,7 @@ function drawLineColors() {
     $('#off-button').on('click',function() {
       $.ajax({
         type: "POST",
-        url: "http://exceed.srakrn.me/api/fingerpalm-aircon/set/",
+        url: "http://ecourse.cpe.ku.ac.th:1515/api/fingerpalm-aircon/set/",
         data: {
           value:"1"
         },
